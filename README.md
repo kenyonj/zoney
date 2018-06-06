@@ -23,13 +23,17 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-# initialize an instance of Zoney::Zone
+# Initialize an instance of Zoney::Zone
 zoney = Zoney::Zone.new
 
-# asks for all the zone information:
+# This instance is defaulted to 1 amplifier using the /dev/ttyUSB0 port. If you
+# would like to change this you can override these in the initialize call:
+zoney = Zoney::Zone.new(port: "/dev/ttyUSB1", number_of_amplifiers: 3)
+
+# Get all the zone information:
 zoney.all
 
-# get a specific zone's information
+# Get a specific zone's information
 zoney.find(zone_number: 14)
 ```
 
