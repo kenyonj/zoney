@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Justin Kenyon"]
   spec.email         = ["kenyonj@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Wrapper for interacting with the MonoPrice 6 Zone Amplifier."
+  spec.description   = "This provides an api for interacting with the MonoPrice 6 Zone Amplifier via a serial port connection. You can control up to 3 linked amplifiers."
+  spec.homepage      = "https://www.github.com/kenyonj/zoney"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -33,4 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "rubyserial", "~> 0.5.0"
 end
