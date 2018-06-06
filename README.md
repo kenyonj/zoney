@@ -1,8 +1,8 @@
 # Zoney
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/zoney`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem allows you to communicate with the [MonoPrice 6 Zone
+Amplifier](https://www.monoprice.com/product?p_id=10761) via a serial port
+connection
 
 ## Installation
 
@@ -22,7 +22,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+# initialize an instance of Zoney::Zone
+zoney = Zoney::Zone.new
+
+# asks for all the zone information:
+zoney.all
+
+# get a specific zone's information
+zoney.find(zone_number: 14)
+```
 
 ## Development
 
