@@ -40,7 +40,7 @@ module Zoney
 
     def find(zone_number:)
       data_string = "?#{zone_number}\r\n"
-      write_data(string: data_stringr && sleep(1)
+      write_data(string: data_string) && sleep(1)
 
       decoded_response[0]
     end
@@ -94,7 +94,7 @@ module Zoney
     end
 
     def update_attribute(zone_number:, attribute:, value:)
-      serial_port.write("<#{zone_number}#{attribute}#{value}\r")
+      serial_port.write("<#{zone_number}#{attribute}#{padded_number(value)}\r")
     end
 
     private
@@ -132,6 +132,16 @@ module Zoney
           volume_level: zone[6],
           zone_number: zone[1],
         }
+      end
+    end
+
+    def padded_number(number)
+      stringified_number = number.to_s
+
+      if stringified_number.length < 2
+        "0#{stringified_number}"
+      else
+        stringified_number
       end
     end
   end
