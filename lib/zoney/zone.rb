@@ -40,7 +40,7 @@ module Zoney
 
     def find(zone_number:)
       data_string = "?#{zone_number}\r\n"
-      write_data(string: data_string) && sleep(1)
+      write_data(string: data_stringr && sleep(1)
 
       decoded_response[0]
     end
@@ -54,11 +54,11 @@ module Zoney
     end
 
     def mute(zone_number:)
-      update_attribute(zone_number: zone_number, attribute: "mt", value: "01")
+      update_attribute(zone_number: zone_number, attribute: "mu", value: "01")
     end
 
     def unmute(zone_number:)
-      update_attribute(zone_number: zone_number, attribute: "mt", value: "00")
+      update_attribute(zone_number: zone_number, attribute: "mu", value: "00")
     end
 
     def change_source(zone_number:, source_number:)
