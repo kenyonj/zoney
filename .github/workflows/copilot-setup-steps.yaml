@@ -1,7 +1,5 @@
-name:  Copilot code review
-on:
-  pull_request: 
-
+name:  Copilot Setup Steps
+on: workflow_dispatch
 jobs:
   copilot-setup-steps:
     runs-on: justin-runner
