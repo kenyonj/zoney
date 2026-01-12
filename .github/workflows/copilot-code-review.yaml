@@ -1,0 +1,7 @@
+name:  Copilot code review
+on:
+  pull_request: 
+
+jobs:
+  copilot-setup-steps:
+    runs-on: justin-runner
