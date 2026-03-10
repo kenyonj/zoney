@@ -1,5 +1,5 @@
 name:  Copilot Setup Steps
 on: workflow_dispatch
 jobs:
-  copilot-setup-steps:
+  disable-copilot-setup-steps:
     runs-on: justin-runner
