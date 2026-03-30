@@ -4,39 +4,6 @@ This gem allows you to communicate with the [MonoPrice 6 Zone
 Amplifier](https://www.monoprice.com/product?p_id=10761) via a serial port
 connection
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'zoney'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install zoney
-
-## Usage
-
-```ruby
-# Initialize an instance of Zoney::Zone
-zoney = Zoney::Zone.new
-
-# This instance is defaulted to 1 amplifier using the /dev/ttyUSB0 port. If you
-# would like to change this you can override these in the initialize call:
-zoney = Zoney::Zone.new(port: "/dev/ttyUSB1", number_of_amplifiers: 3)
-
-# Get all the zone information:
-zoney.all
-
-# Get a specific zone's information
-zoney.find(zone_number: 14)
-```
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
